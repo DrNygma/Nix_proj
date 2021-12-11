@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nix_proj", "Nix_proj\Nix_proj.csproj", "{BEDE3B3A-028A-4BAC-8C46-6C35324A1ACF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nix_proj", "Nix_proj\Nix_proj.csproj", "{BEDE3B3A-028A-4BAC-8C46-6C35324A1ACF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{1ADF49D7-3D65-4CD1-90DE-776250C0751E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{21652922-F7E6-40A1-9270-44332F807709}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{2CB1623B-AF15-4FCE-B939-12E54ABF152F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{3E5548F6-C771-47BF-8D4F-2C82ADC9BF2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{E320AAF0-D4E9-43A9-896B-9B45F45D3E6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +28,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BEDE3B3A-028A-4BAC-8C46-6C35324A1ACF} = {E320AAF0-D4E9-43A9-896B-9B45F45D3E6C}
+		{E320AAF0-D4E9-43A9-896B-9B45F45D3E6C} = {1ADF49D7-3D65-4CD1-90DE-776250C0751E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2A519952-3A47-46FC-83E3-39A16C8B8EA0}
