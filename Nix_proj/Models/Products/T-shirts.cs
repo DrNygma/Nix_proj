@@ -8,7 +8,7 @@ namespace Nix_proj.Models.Products
 {
     class T_shirts
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Size { get; set; }
     }

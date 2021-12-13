@@ -3,16 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace Nix_proj.Models.Orders
 {
     class Order
     {
-        public int Id { get; set; }
-        public int UserId { get; set; }
+        [Key]
+        public Guid Id { get; set; }
+        public Guid UserId { get; set; }
+        public List<Guid> ProductsIds { get; set; }
+        [Required]
         public DateTime Date { get; set; }
-        public List<int> ProductsIds { get; set; }
+        [Required]
         public string OrderPrice { get; set; }
+        [Required]
+        [Range (5, 70)]
         public string Sale { get; set; }
     }
 }
