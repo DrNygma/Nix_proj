@@ -16,6 +16,7 @@ namespace Nix_proj.Models.Categories
         [StringLength(50, MinimumLength = 4, ErrorMessage = "В названии категории должно быть от 4 до 50 символов")]
         public string Name { get; set; }
         [Required]
+        //
         public List<Product> Items { get; set; }
 
     }

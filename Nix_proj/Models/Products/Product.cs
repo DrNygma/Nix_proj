@@ -21,8 +21,12 @@ namespace Nix_proj.Models.Products
         [StringLength(11, MinimumLength = 9, ErrorMessage = "В данном поле должно быть от 10 до 11 символов")]
         public string Size { get; set; }
         [Required]
-        [StringLength(11, MinimumLength=10, ErrorMessage = "В данном поле должно быть от 10 до 11 символов")]
+        [StringLength(5, MinimumLength=4, ErrorMessage = "Сезон должен стостоять от 4 до 5 символов")]
         public string Season { get; set; }
+        [Required]
+        [Product]
+        [StringLength(4, MinimumLength = 4, ErrorMessage = "Год должен содержать 4 символа")]
+        public int Year { get; set; }
         [Required]
         [MinLength(1, ErrorMessage = "Цена не может меньше быть меньше 1")]
         public string Price { get; set; }
@@ -31,5 +35,36 @@ namespace Nix_proj.Models.Products
         [Required]
         [Range(0,5, ErrorMessage = "Рейтинг должен быть от 0 до 5")]
         public int Raiting { get; set; }
+        public int year;
+        public void Method()
+        {
+            try
+            {
+                Add(6);
+            }
+            catch (IndexOutOfRangeException)
+            {
+                Console.WriteLine("Catch в Metod: (ex.Message)");
+            }
+            finally
+            {
+                Console.WriteLine("Блок finally в Metod: (ex.Message)");
+            }
+        }
+        public void Add(int val)
+        {
+            try
+            {
+                int res = val / 0;
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Exception Divide by zero");
+            }
+            finally
+            {
+                Console.WriteLine("Блок finally в Add");
+            }
+        }
     }
 }

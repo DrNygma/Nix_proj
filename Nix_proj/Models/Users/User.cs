@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace Nix_proj.Models.User
+namespace Nix_proj.Models.Users
 {
     class User
     {
@@ -24,14 +24,17 @@ namespace Nix_proj.Models.User
         [Phone(ErrorMessage = "Некорректный формат данных для мобильного телефона")]
         public string PhoneNumber { get; set; }
         [Required]
-        [EmailAddress(ErrorMessage = "Некорректный формат данных для почты")]
+        //[EmailAddress(ErrorMessage = "Некорректный формат данных для почты")]
+        [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage = "Некорректный формат данных для почты" )]
         public string Mail { get; set; }
         [Required]
         public string Address { get; set; }
         [Required]
+        [User]
         //[RegularExpression("{0:dd/MM/yyyy}", ErrorMessage = "Некорректный ввод даты рождения!")]
         [DataType(DataType.DateTime)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DateOfBirth { get; set; }
     }
+
 }
