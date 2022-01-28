@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Nix_proj.Models.Products;
 using System.ComponentModel.DataAnnotations;
 
-namespace Nix_proj.Models.Categories
+namespace DomainCore.Models
 {
-    class Categories
+    public class Category
     {
         [Key]
         public Guid Id { get; set; }

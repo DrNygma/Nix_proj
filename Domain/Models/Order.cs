@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-using Nix_proj.Models.Products;
 
-namespace Nix_proj.Models.Orders
+namespace DomainCore.Models
 {
-    class Order
+    public class Order
     {
         [Key]
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
-        public virtual List<Product> Products { get; set; }
+       
         [Required]
         public DateTime Date { get; set; }
         [Required]
@@ -21,5 +20,7 @@ namespace Nix_proj.Models.Orders
         [Required]
         [Range (5, 70)]
         public string Sale { get; set; }
+        public virtual User User { get; set; }
+        public virtual List<Product> Products { get; set; }
     }
 }

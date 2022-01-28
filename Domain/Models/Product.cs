@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-using Nix_proj.Models.Brands;
-using Nix_proj.Models.Categories;
 
-namespace Nix_proj.Models.Products
+
+namespace DomainCore.Models
 {
-    class Product
+    public class Product
     {
         [Key]
         public Guid Id { get; set; }
@@ -33,7 +32,7 @@ namespace Nix_proj.Models.Products
         [MinLength(1, ErrorMessage = "Цена не может меньше быть меньше 1")]
         public string Price { get; set; }
         [Required]
-        public bool                                           01 { get; set; }
+        public bool Availability { get; set; }
         [Required]
         [Range(0,5, ErrorMessage = "Рейтинг должен быть от 0 до 5")]
         public int Raiting { get; set; }

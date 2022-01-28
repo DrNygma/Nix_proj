@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace Nix_proj.Models.Users
+namespace DomainCore.Models
 {
-    class User
+    public class User
     {
         [Key]
         public Guid Id { get; set; }
