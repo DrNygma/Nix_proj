@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DomainCore.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 
 namespace InfrastructureData.DataAccess
@@ -19,7 +20,10 @@ namespace InfrastructureData.DataAccess
         public GenericRepository<Order> orderRepository;
         public GenericRepository<Product> productRepository;
         public GenericRepository<User> userRepository;
-
+        public UnitOfWork(AppDbContext applicationContext, ILoggerFactory loggerFactory)
+        {
+            this._context = applicationContext;
+        }
         public GenericRepository<Brand> BrandRepository
         {
             get

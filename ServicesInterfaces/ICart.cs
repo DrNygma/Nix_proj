@@ -9,7 +9,7 @@ namespace InfrastructureData
 {
     public interface ICart
     {
-        void AddToCart(Guid clientId, Guid productId);                  // Добавить в корзину
+        void AddToCart(Guid clientId, Guid productId);                 
         void RemoveFromCart(Guid clientId, Guid productId);
     }
 }
