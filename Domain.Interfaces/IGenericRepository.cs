@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using DomainCore;
 using System.Linq.Expressions;
 
-namespace Domain.Interfaces
+namespace DomainInterfaces
 
 {
-    interface IGenericRepository<TEntity> where TEntity : class
+    public interface IGenericRepository<TEntity> where TEntity : class
     {
         IEnumerable<TEntity> GetAll(); // получение всех объектов
         TEntity GetById(Guid id); // получение одного объекта по id

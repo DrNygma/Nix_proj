@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using InfrastructureData.DataAccess;
+using DomainInterfaces;
 
 namespace InfrastructureData
 {

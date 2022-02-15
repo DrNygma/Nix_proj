@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using DomainCore.Models;
 
 
-namespace DomainCore.Models.Validator
+namespace DomainCore.Validator
 {
     internal class ProductAttribute : ValidationAttribute
     {

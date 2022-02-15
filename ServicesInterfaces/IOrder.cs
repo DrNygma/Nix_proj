@@ -1,5 +1,4 @@
-﻿using DomainInterfaces;
-using DomainCore.Models;
+﻿using DomainCore.Models;
 
 namespace ServicesInterfaces
 {
